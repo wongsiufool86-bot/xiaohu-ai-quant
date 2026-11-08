@@ -1,0 +1,18 @@
+data/
+.venv/
+__pycache__/
+.pytest_cache/
+.DS_Store
+.env
+*.parquet
+*.csv
+
+# Results: only summaries are public. Daily curves are close to the price series itself.
+results/*
+!results/ep[0-9][0-9]/
+results/ep[0-9][0-9]/*
+!results/ep[0-9][0-9]/results.json
+!results/ep[0-9][0-9]/annual.csv
+!results/ep[0-9][0-9]/cost_sweep.csv
+!results/ep[0-9][0-9]/param_grid.csv
+!results/ep[0-9][0-9]/trades.csv

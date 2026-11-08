@@ -1,0 +1,286 @@
+{
+  "symbol": "SPY",
+  "rules": {
+    "n_default": 12,
+    "cost_bps_per_buy": 5.0,
+    "fill": "open of first trading day of each month",
+    "cash": "3-month Treasury",
+    "horizon_years": 10
+  },
+  "checks": {
+    "reconcile": {
+      "samples": 22,
+      "max_relative_gap": 1.3322676295501878e-15,
+      "passed": true
+    }
+  },
+  "n12_at_end_of_dca": {
+    "n_starts": 394,
+    "first_start": "1993-01-29",
+    "last_start": "2025-10-01",
+    "lump_win_share": 0.7563451776649747,
+    "median_ratio": 1.044442965492284,
+    "mean_ratio": 1.0371805778237322,
+    "worst_ratio": 0.7078769670403146,
+    "worst_start": "2008-06-02",
+    "best_ratio": 1.331196869742653,
+    "best_start": "2009-03-02"
+  },
+  "n12_at_10y": {
+    "n_starts": 285,
+    "first_start": "1993-01-29",
+    "last_start": "2016-09-01",
+    "lump_win_share": 0.7333333333333333,
+    "median_ratio": 1.0426939347132707,
+    "mean_ratio": 1.0304490750577207,
+    "worst_ratio": 0.7078769670403142,
+    "worst_start": "2008-06-02",
+    "best_ratio": 1.331196869742653,
+    "best_start": "2009-03-02"
+  },
+  "pain_first_12m": {
+    "median_lump_mdd": -0.1010188304577837,
+    "median_dca_mdd": -0.06648373028223886,
+    "worst_lump_mdd": -0.5148123113825342,
+    "worst_dca_mdd": -0.4179353291813217,
+    "worst_lump_start": "2008-04-01",
+    "share_lump_below_start_at_some_point_by_10pct": 0.3053435114503817,
+    "share_dca_below_start_at_some_point_by_10pct": 0.15521628498727735
+  },
+  "cost_sweep_n12_at12m": [
+    {
+      "cost_bps": 0,
+      "lump_win_share": 0.7563451776649747,
+      "median_ratio": 1.044442965492284
+    },
+    {
+      "cost_bps": 5,
+      "lump_win_share": 0.7563451776649747,
+      "median_ratio": 1.044442965492284
+    },
+    {
+      "cost_bps": 20,
+      "lump_win_share": 0.7563451776649747,
+      "median_ratio": 1.044442965492284
+    },
+    {
+      "cost_bps": 50,
+      "lump_win_share": 0.7563451776649747,
+      "median_ratio": 1.044442965492284
+    }
+  ],
+  "by_n": {
+    "3": {
+      "at_end_of_dca": {
+        "n_starts": 403,
+        "first_start": "1993-01-29",
+        "last_start": "2026-07-01",
+        "lump_win_share": 0.6401985111662531,
+        "median_ratio": 1.011211416811879,
+        "mean_ratio": 1.0065417405909052,
+        "worst_ratio": 0.8546826776771024,
+        "worst_start": "2008-10-01",
+        "best_ratio": 1.1168296645026172,
+        "best_start": "2020-04-01"
+      },
+      "at_10y": {
+        "n_starts": 285,
+        "first_start": "1993-01-29",
+        "last_start": "2016-09-01",
+        "lump_win_share": 0.6175438596491228,
+        "median_ratio": 1.0103422309404315,
+        "mean_ratio": 1.0051157943224123,
+        "worst_ratio": 0.8546826776771025,
+        "worst_start": "2008-10-01",
+        "best_ratio": 1.096167107913314,
+        "best_start": "2009-04-01"
+      }
+    },
+    "6": {
+      "at_end_of_dca": {
+        "n_starts": 400,
+        "first_start": "1993-01-29",
+        "last_start": "2026-04-01",
+        "lump_win_share": 0.69,
+        "median_ratio": 1.0210196685286421,
+        "mean_ratio": 1.016703123406978,
+        "worst_ratio": 0.755939003389739,
+        "worst_start": "2008-09-02",
+        "best_ratio": 1.2141765185526592,
+        "best_start": "2020-04-01"
+      },
+      "at_10y": {
+        "n_starts": 285,
+        "first_start": "1993-01-29",
+        "last_start": "2016-09-01",
+        "lump_win_share": 0.6771929824561403,
+        "median_ratio": 1.0167484753265774,
+        "mean_ratio": 1.0132291031005012,
+        "worst_ratio": 0.7559390033897387,
+        "worst_start": "2008-09-02",
+        "best_ratio": 1.1992251884304401,
+        "best_start": "2009-03-02"
+      }
+    },
+    "12": {
+      "at_end_of_dca": {
+        "n_starts": 394,
+        "first_start": "1993-01-29",
+        "last_start": "2025-10-01",
+        "lump_win_share": 0.7563451776649747,
+        "median_ratio": 1.044442965492284,
+        "mean_ratio": 1.0371805778237322,
+        "worst_ratio": 0.7078769670403146,
+        "worst_start": "2008-06-02",
+        "best_ratio": 1.331196869742653,
+        "best_start": "2009-03-02"
+      },
+      "at_10y": {
+        "n_starts": 285,
+        "first_start": "1993-01-29",
+        "last_start": "2016-09-01",
+        "lump_win_share": 0.7333333333333333,
+        "median_ratio": 1.0426939347132707,
+        "mean_ratio": 1.0304490750577207,
+        "worst_ratio": 0.7078769670403142,
+        "worst_start": "2008-06-02",
+        "best_ratio": 1.331196869742653,
+        "best_start": "2009-03-02"
+      }
+    },
+    "24": {
+      "at_end_of_dca": {
+        "n_starts": 382,
+        "first_start": "1993-01-29",
+        "last_start": "2024-10-01",
+        "lump_win_share": 0.8089005235602095,
+        "median_ratio": 1.0991599457978636,
+        "mean_ratio": 1.0789031512314504,
+        "worst_ratio": 0.7084324122480292,
+        "worst_start": "2007-11-01",
+        "best_ratio": 1.5302646404647586,
+        "best_start": "2020-04-01"
+      },
+      "at_10y": {
+        "n_starts": 285,
+        "first_start": "1993-01-29",
+        "last_start": "2016-09-01",
+        "lump_win_share": 0.7824561403508772,
+        "median_ratio": 1.080595453337455,
+        "mean_ratio": 1.0674290486081779,
+        "worst_ratio": 0.7084324122480292,
+        "worst_start": "2007-11-01",
+        "best_ratio": 1.4693459824082489,
+        "best_start": "2009-03-02"
+      }
+    },
+    "36": {
+      "at_end_of_dca": {
+        "n_starts": 370,
+        "first_start": "1993-01-29",
+        "last_start": "2023-10-02",
+        "lump_win_share": 0.7756756756756756,
+        "median_ratio": 1.141501181691611,
+        "mean_ratio": 1.1204718521596115,
+        "worst_ratio": 0.6757142214621061,
+        "worst_start": "2000-09-01",
+        "best_ratio": 1.5797646776579157,
+        "best_start": "2009-03-02"
+      },
+      "at_10y": {
+        "n_starts": 285,
+        "first_start": "1993-01-29",
+        "last_start": "2016-09-01",
+        "lump_win_share": 0.7333333333333333,
+        "median_ratio": 1.1256149677341412,
+        "mean_ratio": 1.1060292603530344,
+        "worst_ratio": 0.6757142214621062,
+        "worst_start": "2000-09-01",
+        "best_ratio": 1.5797646776579155,
+        "best_start": "2009-03-02"
+      }
+    }
+  },
+  "split": {
+    "at_end_of_dca": {
+      "before_2010": {
+        "n_starts": 204,
+        "first_start": "1993-01-29",
+        "last_start": "2009-12-01",
+        "lump_win_share": 0.7058823529411765,
+        "median_ratio": 1.0291836737798756,
+        "mean_ratio": 1.0195095836358052,
+        "worst_ratio": 0.7078769670403146,
+        "worst_start": "2008-06-02",
+        "best_ratio": 1.331196869742653,
+        "best_start": "2009-03-02"
+      },
+      "from_2010": {
+        "n_starts": 190,
+        "first_start": "2010-01-04",
+        "last_start": "2025-10-01",
+        "lump_win_share": 0.8105263157894737,
+        "median_ratio": 1.0601365545667822,
+        "mean_ratio": 1.0561536452676117,
+        "worst_ratio": 0.8667119142178287,
+        "worst_start": "2022-01-03",
+        "best_ratio": 1.3284686524477065,
+        "best_start": "2020-04-01"
+      }
+    },
+    "at_10y": {
+      "before_2010": {
+        "n_starts": 204,
+        "first_start": "1993-01-29",
+        "last_start": "2009-12-01",
+        "lump_win_share": 0.7058823529411765,
+        "median_ratio": 1.0291836737798756,
+        "mean_ratio": 1.0195095836358052,
+        "worst_ratio": 0.7078769670403142,
+        "worst_start": "2008-06-02",
+        "best_ratio": 1.331196869742653,
+        "best_start": "2009-03-02"
+      },
+      "from_2010": {
+        "n_starts": 81,
+        "first_start": "2010-01-04",
+        "last_start": "2016-09-01",
+        "lump_win_share": 0.8024691358024691,
+        "median_ratio": 1.0673153895245522,
+        "mean_ratio": 1.058000386786989,
+        "worst_ratio": 0.9503223942490392,
+        "worst_start": "2011-05-02",
+        "best_ratio": 1.191404288089827,
+        "best_start": "2010-09-01"
+      }
+    }
+  },
+  "monthly": {
+    "n_months": 405,
+    "share_up": 0.654320987654321,
+    "share_beat_cash": 0.6296296296296297,
+    "avg_month_spy": 0.009496034400064234,
+    "avg_month_cash": 0.00213145300142159
+  },
+  "dca_win_years": {
+    "top": {
+      "2008": 11,
+      "2000": 11,
+      "2001": 11,
+      "2002": 9,
+      "2007": 8
+    },
+    "share_in_top5_years": 0.5208333333333334
+  },
+  "idle_cash_zero_rate": {
+    "lump_win_share": 0.7817258883248731,
+    "median_ratio": 1.0594620778530475
+  },
+  "worst_start_recovery": {
+    "start": "2008-06-02",
+    "lump_back_to_start": "2011-02-07",
+    "dca_back_to_start": "2009-07-23",
+    "lump_min": 0.49611241247170584,
+    "dca_min": 0.7324639905140014
+  }
+}

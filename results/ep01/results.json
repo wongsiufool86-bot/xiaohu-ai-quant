@@ -1,0 +1,235 @@
+{
+  "symbol": "SPY",
+  "rules": {
+    "fast": 20,
+    "slow": 60,
+    "cost_bps_per_side": 5.0,
+    "fill": "next open",
+    "cash": "3-month Treasury (constant maturity)"
+  },
+  "data_quality": {
+    "rows": 8477,
+    "first_date": "1993-01-29",
+    "last_date": "2026-10-02",
+    "duplicate_dates": 0,
+    "unsorted": false,
+    "missing_values": 0,
+    "ohlc_inconsistent": 0,
+    "zero_volume": 0,
+    "big_moves": {
+      "2008-10-13": 0.1452,
+      "2008-10-28": 0.1169,
+      "2020-03-16": -0.1094,
+      "2025-04-09": 0.105
+    },
+    "gaps_over_4_calendar_days": {
+      "2001-09-17": 7,
+      "2007-01-03": 5,
+      "2012-10-31": 5
+    }
+  },
+  "checks": {
+    "lookahead": {
+      "cuts_tested": 20,
+      "failed_cuts": [],
+      "passed": true
+    },
+    "reconcile_strategy": {
+      "max_relative_gap": 1.6653345369377348e-14,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    "reconcile_buyhold": {
+      "max_relative_gap": 1.432187701766452e-14,
+      "tolerance": 1e-06,
+      "passed": true
+    }
+  },
+  "strategy": {
+    "start": "1993-04-26",
+    "end": "2026-10-02",
+    "final_multiple": 9.743381713297067,
+    "cagr": 0.07046241535684139,
+    "ann_vol": 0.11986364630215927,
+    "sharpe": 0.4152624430708954,
+    "max_drawdown": -0.3732781928643881,
+    "longest_underwater": {
+      "days": 3849,
+      "start": "1999-05-13",
+      "end": "2009-11-25",
+      "recovered": true
+    },
+    "exposure": 0.7050368258493704,
+    "calmar": 0.18876649293691894,
+    "n_trades": 73,
+    "win_rate": 0.5,
+    "avg_win": 0.10559450224239159,
+    "avg_loss": -0.041217016994295426
+  },
+  "buyhold": {
+    "start": "1993-04-26",
+    "end": "2026-10-02",
+    "final_multiple": 32.26240299855169,
+    "cagr": 0.1094909640018562,
+    "ann_vol": 0.18560863007987907,
+    "sharpe": 0.5153879258538961,
+    "max_drawdown": -0.5518911920565719,
+    "longest_underwater": {
+      "days": 2407,
+      "start": "2000-03-24",
+      "end": "2006-10-26",
+      "recovered": true
+    },
+    "exposure": 0.9998812069375148,
+    "calmar": 0.1983923019206887,
+    "n_trades": 1,
+    "win_rate": NaN,
+    "avg_win": NaN,
+    "avg_loss": NaN
+  },
+  "annual": {
+    "years": 33,
+    "years_strategy_won": 7,
+    "best_years_for_strategy": {
+      "2008": 0.3379,
+      "2018": 0.0909,
+      "2002": 0.062
+    },
+    "worst_years_for_strategy": {
+      "2019": -0.2216,
+      "2010": -0.1927,
+      "1997": -0.1827
+    },
+    "partial_last_year": 2026
+  },
+  "event_2008": {
+    "exit_before_low": "2009-01-21",
+    "reentry_after_low": "2009-04-09",
+    "buyhold_low_date": "2009-03-09",
+    "buyhold_2008": -0.36794719399230735,
+    "strategy_2008": -0.030040019872718537,
+    "spy_change_exit_to_reentry": 0.02825292937085777
+  },
+  "buyhold_price_only_multiple": 17.74386200918588,
+  "cheat_no_shift": {
+    "final_multiple": 13.585244519487507,
+    "cagr": 0.08115767216893865,
+    "max_drawdown": -0.3540307057366274
+  },
+  "cost_sweep": [
+    {
+      "cost_bps": 0,
+      "strategy_cagr": 0.07278671717802809,
+      "buyhold_cagr": 0.10950756021666175
+    },
+    {
+      "cost_bps": 2,
+      "strategy_cagr": 0.07185653096842914,
+      "buyhold_cagr": 0.10950092269693945
+    },
+    {
+      "cost_bps": 5,
+      "strategy_cagr": 0.07046241535684139,
+      "buyhold_cagr": 0.1094909640018562
+    },
+    {
+      "cost_bps": 10,
+      "strategy_cagr": 0.06814199012786726,
+      "buyhold_cagr": 0.10947435973114983
+    },
+    {
+      "cost_bps": 15,
+      "strategy_cagr": 0.06582543696090615,
+      "buyhold_cagr": 0.10945774739659808
+    },
+    {
+      "cost_bps": 20,
+      "strategy_cagr": 0.0635127513287872,
+      "buyhold_cagr": 0.10944112699024355
+    },
+    {
+      "cost_bps": 30,
+      "strategy_cagr": 0.058898964575543555,
+      "buyhold_cagr": 0.10940786193023766
+    },
+    {
+      "cost_bps": 40,
+      "strategy_cagr": 0.054300593711357426,
+      "buyhold_cagr": 0.10937456448723837
+    },
+    {
+      "cost_bps": 50,
+      "strategy_cagr": 0.04971760262789715,
+      "buyhold_cagr": 0.10934123459716072
+    }
+  ],
+  "breakeven_vs_buyhold_bps": 0.0,
+  "breakeven_vs_zero_bps": null,
+  "param_grid": {
+    "n_combos": 82,
+    "rank_of_20_60_by_sharpe": 72,
+    "best": {
+      "fast": 100.0,
+      "slow": 300.0,
+      "sharpe": 0.6640837968391526,
+      "cagr": 0.11801578057203566,
+      "max_drawdown": -0.3371738233754189
+    },
+    "worst": {
+      "fast": 5.0,
+      "slow": 20.0,
+      "sharpe": 0.23334810284650573,
+      "cagr": 0.046429441017122874,
+      "max_drawdown": -0.3797374462574088
+    },
+    "median_sharpe": 0.5448659123400384,
+    "share_beating_buyhold_sharpe": 0.573170731707317,
+    "buyhold_sharpe_same_window": 0.5196784766489545,
+    "neighbourhood_sharpe_20_60": 0.44355548496073083,
+    "window_start": "1994-04-06"
+  },
+  "split": {
+    "in_sample": "1994-04-06 to 2009-12-31",
+    "out_of_sample": "2010-01-01 to 2026-10-02",
+    "best_in_sample": {
+      "fast": 40,
+      "slow": 300,
+      "in_sample": {
+        "sharpe": 0.665309919350419,
+        "cagr": 0.12245325492663572,
+        "max_drawdown": -0.19030049271509608
+      },
+      "out_of_sample": {
+        "sharpe": 0.6004391915595014,
+        "cagr": 0.09774080002625118,
+        "max_drawdown": -0.33717382337541857
+      }
+    },
+    "20_60": {
+      "fast": 20,
+      "slow": 60,
+      "in_sample": {
+        "sharpe": 0.2431348944575663,
+        "cagr": 0.0601850010348699,
+        "max_drawdown": -0.37327819286438524
+      },
+      "out_of_sample": {
+        "sharpe": 0.5863786196993939,
+        "cagr": 0.07977731117459186,
+        "max_drawdown": -0.23686240992112828
+      }
+    },
+    "buyhold": {
+      "in_sample": {
+        "sharpe": 0.29552577171644717,
+        "cagr": 0.07853612989869019,
+        "max_drawdown": -0.5518911920565714
+      },
+      "out_of_sample": {
+        "sharpe": 0.7770699956679996,
+        "cagr": 0.14116232784104632,
+        "max_drawdown": -0.3371738233754191
+      }
+    }
+  }
+}
