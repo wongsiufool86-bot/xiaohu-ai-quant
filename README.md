@@ -1,4 +1,4 @@
-# ai-quant-backtests
+# xiaohu-ai-quant
 
 Each episode of the channel takes one popular trading idea and does three things:
 - writes it as precise rules (`specs/`);
