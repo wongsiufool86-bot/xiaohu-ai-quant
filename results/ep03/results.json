@@ -1,0 +1,445 @@
+{
+  "symbol": "SPY",
+  "rules": {
+    "window": 200,
+    "cost_bps_per_side": 5.0,
+    "fill": "next open",
+    "cash": "3-month Treasury (constant maturity)"
+  },
+  "checks": {
+    "lookahead": {
+      "cuts_tested": 20,
+      "failed_cuts": [],
+      "passed": true
+    },
+    "reconcile_strategy": {
+      "max_relative_gap": 1.0658141036401503e-14,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    "reconcile_buyhold": {
+      "max_relative_gap": 1.1324274851176597e-14,
+      "tolerance": 1e-06,
+      "passed": true
+    }
+  },
+  "strategy": {
+    "start": "1993-11-11",
+    "end": "2026-10-02",
+    "final_multiple": 16.173763825707674,
+    "cagr": 0.08831188417064251,
+    "ann_vol": 0.12148007959452349,
+    "sharpe": 0.5486163633313381,
+    "max_drawdown": -0.24428049382753436,
+    "longest_underwater": {
+      "days": 1574,
+      "start": "1999-07-16",
+      "end": "2003-11-06",
+      "recovered": true
+    },
+    "exposure": 0.7736168156559555,
+    "calmar": 0.36151836271049953,
+    "n_trades": 104,
+    "win_rate": 0.30097087378640774,
+    "avg_win": 0.1370426016224186,
+    "avg_loss": -0.015830603625940045
+  },
+  "buyhold": {
+    "start": "1993-11-11",
+    "end": "2026-10-02",
+    "final_multiple": 29.69782387878378,
+    "cagr": 0.10860682217074791,
+    "ann_vol": 0.18685179020817264,
+    "sharpe": 0.5095887580598015,
+    "max_drawdown": -0.5518911920565714,
+    "longest_underwater": {
+      "days": 2407,
+      "start": "2000-03-24",
+      "end": "2006-10-26",
+      "recovered": true
+    },
+    "exposure": 0.9998791978738826,
+    "calmar": 0.19679027992100154,
+    "n_trades": 1,
+    "win_rate": NaN,
+    "avg_win": NaN,
+    "avg_loss": NaN
+  },
+  "trade_count": 104,
+  "annual": {
+    "years": 33,
+    "years_strategy_won": 6,
+    "up_years_buyhold": 27,
+    "strategy_won_in_up_years": 0,
+    "down_years_buyhold": 6,
+    "strategy_won_in_down_years": 6,
+    "best": {
+      "2008": 0.34033890045051096,
+      "2002": 0.16730721464699427,
+      "2001": 0.15235961028461031
+    },
+    "worst": {
+      "2010": -0.2145879816585955,
+      "2019": -0.164989754989447,
+      "2023": -0.1329224084229086
+    },
+    "partial_last_year": 2026
+  },
+  "episodes": [
+    {
+      "peak": "1998-07-20",
+      "trough": "1998-08-31",
+      "recovered": "1998-11-23",
+      "buyhold": -0.1903004927150962,
+      "strategy": -0.11448726727132297,
+      "first_exit": "1998-08-28",
+      "days_peak_to_trough": 31,
+      "saved": 0.07581322544377322
+    },
+    {
+      "peak": "2000-03-24",
+      "trough": "2002-10-09",
+      "recovered": "2006-10-26",
+      "buyhold": -0.47514299442294106,
+      "strategy": -0.12089144550343911,
+      "first_exit": "2000-05-11",
+      "days_peak_to_trough": 638,
+      "saved": 0.35425154891950195
+    },
+    {
+      "peak": "2007-10-09",
+      "trough": "2009-03-09",
+      "recovered": "2012-08-16",
+      "buyhold": -0.5518911920565714,
+      "strategy": -0.1374056767441455,
+      "first_exit": "2007-11-09",
+      "days_peak_to_trough": 356,
+      "saved": 0.41448551531242595
+    },
+    {
+      "peak": "2018-09-20",
+      "trough": "2018-12-24",
+      "recovered": "2019-04-12",
+      "buyhold": -0.19348876093913292,
+      "strategy": -0.12374958815056392,
+      "first_exit": "2018-10-12",
+      "days_peak_to_trough": 66,
+      "saved": 0.069739172788569
+    },
+    {
+      "peak": "2020-02-19",
+      "trough": "2020-03-23",
+      "recovered": "2020-08-10",
+      "buyhold": -0.3371738233754191,
+      "strategy": -0.19060734420253245,
+      "first_exit": "2020-02-28",
+      "days_peak_to_trough": 24,
+      "saved": 0.14656647917288668
+    },
+    {
+      "peak": "2022-01-03",
+      "trough": "2022-10-12",
+      "recovered": "2023-12-13",
+      "buyhold": -0.24496333854968022,
+      "strategy": -0.09169006284299264,
+      "first_exit": "2022-01-24",
+      "days_peak_to_trough": 196,
+      "saved": 0.15327327570668758
+    },
+    {
+      "peak": "2025-02-19",
+      "trough": "2025-04-08",
+      "recovered": "2025-06-26",
+      "buyhold": -0.18755308404532645,
+      "strategy": -0.09863117333067006,
+      "first_exit": "2025-03-11",
+      "days_peak_to_trough": 35,
+      "saved": 0.08892191071465638
+    }
+  ],
+  "out_periods": {
+    "n": 103,
+    "completed": 103,
+    "share_bought_back_higher": 0.883495145631068,
+    "median_days_out": 3.0,
+    "share_out_10_days_or_less": 0.7475728155339806,
+    "median_price_change": 0.012849419757771097,
+    "best_saved": -0.31050539507119523,
+    "best_saved_exit": "2008-05-22",
+    "worst_regret": 0.07204700672962971,
+    "worst_regret_exit": "2020-02-28",
+    "busiest_year": 2007,
+    "busiest_year_exits": 9
+  },
+  "independent": {
+    "share_days_above": 0.773737617782073,
+    "exposure": 0.7736168156559555,
+    "up_crossings": 104
+  },
+  "extreme_days": {
+    "best10_out": 10,
+    "worst10_out": 9,
+    "best10_dates": [
+      "2008-10-13",
+      "2008-10-28",
+      "2025-04-09",
+      "2020-03-24",
+      "2020-03-13",
+      "2009-03-23",
+      "2008-11-24",
+      "2020-04-06",
+      "2008-11-13",
+      "2008-10-20"
+    ],
+    "worst10_dates": [
+      "2020-03-16",
+      "2008-10-15",
+      "2020-03-12",
+      "2008-12-01",
+      "2008-09-29",
+      "2020-03-09",
+      "2008-11-20",
+      "1997-10-27",
+      "1998-08-31",
+      "2008-10-09"
+    ],
+    "best_day": 0.14519771156754424,
+    "worst_day": -0.10942375263965642
+  },
+  "idle_cash_zero_rate": {
+    "cagr": 0.08294375718194114,
+    "final_multiple": 13.746155426298968
+  },
+  "cost_sweep": [
+    {
+      "cost_bps": 0,
+      "strategy_cagr": 0.09174291602357787,
+      "buyhold_cagr": 0.10862367986593724
+    },
+    {
+      "cost_bps": 2,
+      "strategy_cagr": 0.09036941315172475,
+      "buyhold_cagr": 0.10861693776878312
+    },
+    {
+      "cost_bps": 5,
+      "strategy_cagr": 0.08831188417064251,
+      "buyhold_cagr": 0.10860682217074791
+    },
+    {
+      "cost_bps": 10,
+      "strategy_cagr": 0.08488992634252224,
+      "buyhold_cagr": 0.10858995629691437
+    },
+    {
+      "cost_bps": 15,
+      "strategy_cagr": 0.08147702306475502,
+      "buyhold_cagr": 0.10857308223637241
+    },
+    {
+      "cost_bps": 20,
+      "strategy_cagr": 0.07807315489495492,
+      "buyhold_cagr": 0.10855619998104538
+    },
+    {
+      "cost_bps": 30,
+      "strategy_cagr": 0.07129244626988585,
+      "buyhold_cagr": 0.10852241085367065
+    },
+    {
+      "cost_bps": 40,
+      "strategy_cagr": 0.06454764556838932,
+      "buyhold_cagr": 0.10848858884993962
+    },
+    {
+      "cost_bps": 50,
+      "strategy_cagr": 0.057838598402427444,
+      "buyhold_cagr": 0.10845473390480631
+    }
+  ],
+  "breakeven_vs_buyhold_bps": 0.0,
+  "param_grid": {
+    "window_start": "1994-04-06",
+    "n": 10,
+    "rank_of_200_by_sharpe": 3,
+    "best": {
+      "window": 300.0,
+      "sharpe": 0.6483178957159681,
+      "cagr": 0.10619750869021738,
+      "max_drawdown": -0.25228598288282333,
+      "exposure": 0.8014184397163121
+    },
+    "worst": {
+      "window": 50.0,
+      "sharpe": 0.29909758509225887,
+      "cagr": 0.05383633708089275,
+      "max_drawdown": -0.3565242232836451,
+      "exposure": 0.6885546588407924
+    },
+    "buyhold": {
+      "sharpe": 0.5196784766489545,
+      "cagr": 0.11091212033783959,
+      "max_drawdown": -0.5518911920565714,
+      "exposure": 1.0
+    },
+    "n_beat_buyhold_cagr": 0,
+    "n_beat_buyhold_sharpe": 4,
+    "rows": [
+      {
+        "window": 50,
+        "sharpe": 0.29909758509225887,
+        "cagr": 0.05383633708089275,
+        "max_drawdown": -0.3565242232836451,
+        "exposure": 0.6885546588407924
+      },
+      {
+        "window": 75,
+        "sharpe": 0.4575901185806218,
+        "cagr": 0.07368868775880588,
+        "max_drawdown": -0.36166652072088146,
+        "exposure": 0.7198581560283688
+      },
+      {
+        "window": 100,
+        "sharpe": 0.4722562867698818,
+        "cagr": 0.07590840281966549,
+        "max_drawdown": -0.48180762414745193,
+        "exposure": 0.7336757153338225
+      },
+      {
+        "window": 120,
+        "sharpe": 0.38095262205813224,
+        "cagr": 0.06519583445965837,
+        "max_drawdown": -0.4986834220867592,
+        "exposure": 0.7432134996331622
+      },
+      {
+        "window": 150,
+        "sharpe": 0.4682040941111742,
+        "cagr": 0.07710676149629458,
+        "max_drawdown": -0.32794252771825316,
+        "exposure": 0.7577647346539497
+      },
+      {
+        "window": 180,
+        "sharpe": 0.5045135505383795,
+        "cagr": 0.08242238442712813,
+        "max_drawdown": -0.2830974184359265,
+        "exposure": 0.7669356810956224
+      },
+      {
+        "window": 200,
+        "sharpe": 0.5610627667079141,
+        "cagr": 0.0900394169676988,
+        "max_drawdown": -0.2442804938275348,
+        "exposure": 0.7714600146735143
+      },
+      {
+        "window": 220,
+        "sharpe": 0.5742552174461373,
+        "cagr": 0.09235146321423393,
+        "max_drawdown": -0.25033324070507745,
+        "exposure": 0.7752506725360724
+      },
+      {
+        "window": 250,
+        "sharpe": 0.5288274798394315,
+        "cagr": 0.08786426418315996,
+        "max_drawdown": -0.2557398889951702,
+        "exposure": 0.7861335289801907
+      },
+      {
+        "window": 300,
+        "sharpe": 0.6483178957159681,
+        "cagr": 0.10619750869021738,
+        "max_drawdown": -0.25228598288282333,
+        "exposure": 0.8014184397163121
+      }
+    ]
+  },
+  "variants": {
+    "base": {
+      "sharpe": 0.5486163633313381,
+      "cagr": 0.08831188417064251,
+      "max_drawdown": -0.24428049382753436,
+      "exposure": 0.7736168156559555,
+      "trades": 104
+    },
+    "band_1pct": {
+      "sharpe": 0.5863327406762909,
+      "cagr": 0.09370696057714101,
+      "max_drawdown": -0.25226438866825107,
+      "exposure": 0.7701135539985504,
+      "trades": 49
+    },
+    "band_2pct": {
+      "sharpe": 0.6400027278223464,
+      "cagr": 0.10154360599556944,
+      "max_drawdown": -0.21979575242693272,
+      "exposure": 0.7690263348634936,
+      "trades": 25
+    },
+    "band_3pct": {
+      "sharpe": 0.6408627090849222,
+      "cagr": 0.10235454215564266,
+      "max_drawdown": -0.22777519982366334,
+      "exposure": 0.7649190625755014,
+      "trades": 17
+    },
+    "monthly": {
+      "sharpe": 0.6268661721073551,
+      "cagr": 0.1017380045144558,
+      "max_drawdown": -0.24353805551365892,
+      "exposure": 0.7763952645566562,
+      "trades": 22
+    }
+  },
+  "split": {
+    "in_sample": "1994-04-06 to 2009-12-31",
+    "out_of_sample": "2010-01-01 to 2026-10-02",
+    "best_in_sample": {
+      "window": 300,
+      "in_sample": {
+        "sharpe": 0.5814582107784002,
+        "cagr": 0.1080525923278648,
+        "max_drawdown": -0.25228598288282333,
+        "exposure": 0.7190416141235814
+      },
+      "out_of_sample": {
+        "sharpe": 0.710305245096707,
+        "cagr": 0.10342055081112655,
+        "max_drawdown": -0.19806568010925585,
+        "exposure": 0.8789461191549964
+      }
+    },
+    "w200": {
+      "window": 200,
+      "in_sample": {
+        "sharpe": 0.46677749066211094,
+        "cagr": 0.0901765329418962,
+        "max_drawdown": -0.21378802859267987,
+        "exposure": 0.6958385876418663
+      },
+      "out_of_sample": {
+        "sharpe": 0.6535383243286659,
+        "cagr": 0.08887766869807256,
+        "max_drawdown": -0.24428049382753425,
+        "exposure": 0.8426299549014954
+      }
+    },
+    "buyhold": {
+      "in_sample": {
+        "sharpe": 0.29552577171644717,
+        "cagr": 0.07853612989869019,
+        "max_drawdown": -0.5518911920565714,
+        "exposure": 1.0
+      },
+      "out_of_sample": {
+        "sharpe": 0.7770699956679996,
+        "cagr": 0.14116232784104632,
+        "max_drawdown": -0.3371738233754191,
+        "exposure": 1.0
+      }
+    }
+  }
+}

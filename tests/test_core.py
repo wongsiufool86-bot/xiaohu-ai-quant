@@ -167,3 +167,29 @@ def test_csv_without_rate_warns_and_earns_zero(tmp_path, monkeypatch):
     with pytest.warns(UserWarning, match="rate.csv"):
         rate = data.load_rate()
     assert data.daily_rate(rate, idx).tolist() == [0.0, 0.0]
+
+
+def test_ma_filter_by_hand():
+    from strategies import ma_filter
+    # window 3. closes 1,2,3 -> ma 2 on day2, close 3 above -> 1. day3 close 1: ma 2 -> below -> 0.
+    # day4 close 2: ma (3+1+2)/3=2, equal -> keep 0. day5 close 9: ma 4 -> above -> 1.
+    px = bars([1, 2, 3, 1, 2, 9], [1, 2, 3, 1, 2, 9])
+    assert ma_filter.target(px, 3).tolist() == [0, 0, 1, 0, 0, 1]
+
+
+def test_ma_filter_band_keeps_state_inside_band():
+    from strategies import ma_filter
+    # window 2, band 10%. day1 close 100 ma 100 -> nothing. day2 close 120 ma 110: 120>121? no -> still 0.
+    # day3 close 200 ma 160 -> 200>176 -> 1. day4 close 190 ma 195: 190<175.5? no -> keep 1.
+    px = bars([100, 120, 200, 190], [100, 120, 200, 190])
+    assert ma_filter.target(px, 2, band=0.10).tolist() == [0, 0, 1, 1]
+
+
+def test_ma_filter_monthly_only_changes_at_month_end():
+    from strategies import ma_filter
+    idx = pd.to_datetime(["2020-01-30", "2020-01-31", "2020-02-03", "2020-02-27", "2020-02-28"])
+    c = np.array([1.0, 2.0, 1.0, 1.0, 9.0])
+    px = pd.DataFrame({"open": c, "high": c, "low": c, "close": c, "volume": 1.0}, index=idx)
+    # window 1 gives close == ma (keep). Use window 2: ma = [nan,1.5,1.5,1,5]
+    # Jan-31 close 2 > 1.5 -> 1; Feb-3 close 1 < 1.5 ignored (not month end); Feb-28 9 > 5 -> 1.
+    assert ma_filter.target(px, 2, monthly=True).tolist() == [0, 1, 1, 1, 1]
