@@ -1,0 +1,904 @@
+{
+  "symbol": "SPY",
+  "rules": {
+    "stop": 0.1,
+    "reentry_window": 20,
+    "cost_bps_per_side": 5.0,
+    "fill": "next open",
+    "cash": "3-month Treasury (constant maturity)"
+  },
+  "scope_note": "SPY is a basket of about 500 companies. Single stocks are not tested; survivorship bias would apply.",
+  "checks": {
+    "lookahead": {
+      "cuts_tested": 20,
+      "failed_cuts": [],
+      "passed": true
+    },
+    "reconcile_strategy": {
+      "max_relative_gap": 1.2656542480726785e-14,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    "reconcile_buyhold": {
+      "max_relative_gap": 1.3655743202889425e-14,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    "lookahead_variants": {
+      "cost_basis": true,
+      "wait20": true,
+      "never_back": true
+    }
+  },
+  "strategy": {
+    "start": "1993-01-29",
+    "end": "2026-10-02",
+    "final_multiple": 25.875912706322858,
+    "cagr": 0.10143664333527624,
+    "ann_vol": 0.14181849156269702,
+    "sharpe": 0.5724505049539458,
+    "max_drawdown": -0.473227783439912,
+    "longest_underwater": {
+      "days": 2596,
+      "start": "2000-03-24",
+      "end": "2007-05-03",
+      "recovered": true
+    },
+    "exposure": 0.9010263064763477,
+    "calmar": 0.2143505662282319,
+    "n_trades": 29,
+    "win_rate": 0.4642857142857143,
+    "avg_win": 0.370597840042276,
+    "avg_loss": -0.06276996282601381
+  },
+  "buyhold": {
+    "start": "1993-01-29",
+    "end": "2026-10-02",
+    "final_multiple": 31.95468531401142,
+    "cagr": 0.108360320055924,
+    "ann_vol": 0.18522396270639788,
+    "sharpe": 0.5104662979732904,
+    "max_drawdown": -0.5518911920565719,
+    "longest_underwater": {
+      "days": 2407,
+      "start": "2000-03-24",
+      "end": "2006-10-26",
+      "recovered": true
+    },
+    "exposure": 0.9998820337383508,
+    "calmar": 0.19634363007702516,
+    "n_trades": 1,
+    "win_rate": NaN,
+    "avg_win": NaN,
+    "avg_loss": NaN
+  },
+  "trade_count": 29,
+  "annual": {
+    "years": 33,
+    "years_strategy_won": 5,
+    "up_years_buyhold": 27,
+    "strategy_won_in_up_years": 2,
+    "down_years_buyhold": 6,
+    "strategy_won_in_down_years": 3,
+    "best": {
+      "2008": 0.19917722559526985,
+      "2002": 0.09392989818250275,
+      "2020": 0.03940403991267183
+    },
+    "worst": {
+      "1997": -0.24532969948636452,
+      "2000": -0.1070860705394101,
+      "1999": -0.07118036607174782
+    },
+    "partial_last_year": 2026
+  },
+  "stops": {
+    "n": 28,
+    "completed": 28,
+    "n_higher": 19,
+    "share_higher": 0.6785714285714286,
+    "n_whipsaw": 13,
+    "share_whipsaw": 0.4642857142857143,
+    "n_whipsaw_strict": 5,
+    "n_deep": 7,
+    "share_deep": 0.25,
+    "median_days_out": 23.0,
+    "median_price_change": 0.021168627972264376,
+    "median_low_vs_exit": -0.06524261558636862,
+    "deepest_low": -0.3571650580258128,
+    "deepest_low_exit": "2008-09-18",
+    "best_saved": -0.22604200497119653,
+    "best_saved_exit": "2008-09-18",
+    "worst_regret": 0.14518511754953978,
+    "worst_regret_exit": "1997-10-28",
+    "shares_multiplier": 0.7749277797799781,
+    "shares_left_per_100": 77.4927779779978,
+    "cash_interest_multiplier": 1.074640463473894,
+    "cost_multiplier": 0.9723815578367643,
+    "open_position_at_end": true,
+    "last_exit": "2025-03-14",
+    "busiest_year": 2000,
+    "busiest_year_stops": 3
+  },
+  "wealth_bridge": {
+    "share_effect": 0.7749277797799781,
+    "interest_effect": 1.074640463473894,
+    "extra_cost_effect": 0.9723815578367643,
+    "product": 0.8097689729079204,
+    "total_ratio": 0.809768972907921
+  },
+  "independent": {
+    "final_multiple": 25.875912706322953,
+    "stops": 28,
+    "engine_final_multiple": 25.875912706322858,
+    "engine_stops": 28,
+    "relative_gap": 3.774758283725532e-15,
+    "gap_before_fix": 0.00011744652366429964
+  },
+  "episodes": [
+    {
+      "peak": "1998-07-20",
+      "trough": "1998-08-31",
+      "recovered": "1998-11-23",
+      "buyhold": -0.1903004927150962,
+      "strategy": -0.10443949225796778,
+      "saved": 0.08586100045712841,
+      "first_exit": "1998-08-17",
+      "stops_in_cycle": 1,
+      "days_peak_to_trough": 31,
+      "cycle_strategy": -0.004156603609525855,
+      "cycle_buyhold": 0.010404475654367973,
+      "rel_multiple": 0.9855888610801494
+    },
+    {
+      "peak": "2000-03-24",
+      "trough": "2002-10-09",
+      "recovered": "2006-10-26",
+      "buyhold": -0.4751429944229414,
+      "strategy": -0.4423045913354049,
+      "saved": 0.032838403087536494,
+      "first_exit": "2000-05-11",
+      "stops_in_cycle": 9,
+      "days_peak_to_trough": 638,
+      "cycle_strategy": -0.08269913584110888,
+      "cycle_buyhold": 0.0005643661228083019,
+      "rel_multiple": 0.9167834626306315
+    },
+    {
+      "peak": "2007-10-09",
+      "trough": "2009-03-09",
+      "recovered": "2012-08-16",
+      "buyhold": -0.5518911920565719,
+      "strategy": -0.29113678899475726,
+      "saved": 0.26075440306181463,
+      "first_exit": "2008-01-09",
+      "stops_in_cycle": 6,
+      "days_peak_to_trough": 356,
+      "cycle_strategy": 0.24886347338542292,
+      "cycle_buyhold": 0.004572584965798709,
+      "rel_multiple": 1.2431789320907471
+    },
+    {
+      "peak": "2018-09-20",
+      "trough": "2018-12-24",
+      "recovered": "2019-04-12",
+      "buyhold": -0.1934887609391327,
+      "strategy": -0.1123621842215985,
+      "saved": 0.0811265767175342,
+      "first_exit": "2018-12-17",
+      "stops_in_cycle": 1,
+      "days_peak_to_trough": 66,
+      "cycle_strategy": -0.007353395656138684,
+      "cycle_buyhold": 0.003022050872760307,
+      "rel_multiple": 0.9896558141270464
+    },
+    {
+      "peak": "2020-02-19",
+      "trough": "2020-03-23",
+      "recovered": "2020-08-10",
+      "buyhold": -0.3371738233754188,
+      "strategy": -0.14688899773192454,
+      "saved": 0.19028482564349425,
+      "first_exit": "2020-02-28",
+      "stops_in_cycle": 1,
+      "days_peak_to_trough": 24,
+      "cycle_strategy": 0.03540161688177057,
+      "cycle_buyhold": 0.0020341926092519724,
+      "rel_multiple": 1.0332996862967634
+    },
+    {
+      "peak": "2022-01-03",
+      "trough": "2022-10-12",
+      "recovered": "2023-12-13",
+      "buyhold": -0.24496333854968033,
+      "strategy": -0.16773178774472108,
+      "saved": 0.07723155080495925,
+      "first_exit": "2022-02-23",
+      "stops_in_cycle": 3,
+      "days_peak_to_trough": 196,
+      "cycle_strategy": 0.0508571423780384,
+      "cycle_buyhold": 0.011998212393564023,
+      "rel_multiple": 1.0383982199855528
+    },
+    {
+      "peak": "2025-02-19",
+      "trough": "2025-04-08",
+      "recovered": "2025-06-26",
+      "buyhold": -0.18755308404532656,
+      "strategy": -0.09035220935176325,
+      "saved": 0.09720087469356331,
+      "first_exit": "2025-03-14",
+      "stops_in_cycle": 1,
+      "days_peak_to_trough": 35,
+      "cycle_strategy": -0.00530783788522371,
+      "cycle_buyhold": 0.004232914793715681,
+      "rel_multiple": 0.9904994622876913
+    }
+  ],
+  "wealth_split": {
+    "total_ratio": 0.809768972907921,
+    "episodes_product": 1.1814758692626839,
+    "rest_of_time": 0.685387652828888,
+    "steps": [
+      {
+        "peak": "1998-07-20",
+        "rel_multiple": 0.9855888610801494
+      },
+      {
+        "peak": "2000-03-24",
+        "rel_multiple": 0.9167834626306315
+      },
+      {
+        "peak": "2007-10-09",
+        "rel_multiple": 1.2431789320907471
+      },
+      {
+        "peak": "2018-09-20",
+        "rel_multiple": 0.9896558141270464
+      },
+      {
+        "peak": "2020-02-19",
+        "rel_multiple": 1.0332996862967634
+      },
+      {
+        "peak": "2022-01-03",
+        "rel_multiple": 1.0383982199855528
+      },
+      {
+        "peak": "2025-02-19",
+        "rel_multiple": 0.9904994622876913
+      }
+    ]
+  },
+  "param_grid": {
+    "n": 7,
+    "buyhold": {
+      "sharpe": 0.5104662979732904,
+      "cagr": 0.108360320055924,
+      "max_drawdown": -0.5518911920565719,
+      "ann_vol": 0.18522396270639788,
+      "final_multiple": 31.95468531401142,
+      "exposure": 0.9998820337383508,
+      "trades": 1
+    },
+    "rank_of_10pct_by_sharpe": 1,
+    "best": {
+      "stop": 0.1,
+      "sharpe": 0.5724505049539458,
+      "cagr": 0.10143664333527624,
+      "max_drawdown": -0.473227783439912,
+      "ann_vol": 0.14181849156269702,
+      "final_multiple": 25.875912706322858,
+      "exposure": 0.9010263064763477,
+      "trades": 29.0,
+      "stops_hit": 28.0
+    },
+    "worst": {
+      "stop": 0.05,
+      "sharpe": 0.4659232112775919,
+      "cagr": 0.07627167554233094,
+      "max_drawdown": -0.2826546154541889,
+      "ann_vol": 0.11790496949615847,
+      "final_multiple": 11.88231281806574,
+      "exposure": 0.7517989854901498,
+      "trades": 83.0,
+      "stops_hit": 82.0
+    },
+    "n_beat_buyhold_cagr": 0,
+    "n_beat_buyhold_sharpe": 2,
+    "n_shallower_drawdown": 5,
+    "rows": [
+      {
+        "stop": 0.05,
+        "sharpe": 0.4659232112775919,
+        "cagr": 0.07627167554233094,
+        "max_drawdown": -0.2826546154541889,
+        "ann_vol": 0.11790496949615847,
+        "final_multiple": 11.88231281806574,
+        "exposure": 0.7517989854901498,
+        "trades": 83,
+        "stops_hit": 82
+      },
+      {
+        "stop": 0.08,
+        "sharpe": 0.5034833609631449,
+        "cagr": 0.08754690831844103,
+        "max_drawdown": -0.46262255289868315,
+        "ann_vol": 0.13381062313422598,
+        "final_multiple": 16.87746161642438,
+        "exposure": 0.8578506547127521,
+        "trades": 43,
+        "stops_hit": 42
+      },
+      {
+        "stop": 0.1,
+        "sharpe": 0.5724505049539458,
+        "cagr": 0.10143664333527624,
+        "max_drawdown": -0.473227783439912,
+        "ann_vol": 0.14181849156269702,
+        "final_multiple": 25.875912706322858,
+        "exposure": 0.9010263064763477,
+        "trades": 29,
+        "stops_hit": 28
+      },
+      {
+        "stop": 0.15,
+        "sharpe": 0.5093005273699535,
+        "cagr": 0.09619016224131238,
+        "max_drawdown": -0.5011414058663274,
+        "ann_vol": 0.15340237290369862,
+        "final_multiple": 22.032866838409046,
+        "exposure": 0.94467382328654,
+        "trades": 17,
+        "stops_hit": 16
+      },
+      {
+        "stop": 0.2,
+        "sharpe": 0.5109680042767095,
+        "cagr": 0.1017308358280602,
+        "max_drawdown": -0.5153615067957209,
+        "ann_vol": 0.16707457872046122,
+        "final_multiple": 26.109658360755965,
+        "exposure": 0.9778223428099564,
+        "trades": 9,
+        "stops_hit": 8
+      },
+      {
+        "stop": 0.25,
+        "sharpe": 0.5077932160317526,
+        "cagr": 0.10154015707818442,
+        "max_drawdown": -0.587739555095601,
+        "ann_vol": 0.1681190781352293,
+        "final_multiple": 25.957925323419044,
+        "exposure": 0.9841925209390114,
+        "trades": 7,
+        "stops_hit": 6
+      },
+      {
+        "stop": 0.3,
+        "sharpe": 0.4920668063887016,
+        "cagr": 0.0999762064796812,
+        "max_drawdown": -0.5790874479916364,
+        "ann_vol": 0.17194404523044893,
+        "final_multiple": 24.745281211771786,
+        "exposure": 0.9884393063583815,
+        "trades": 5,
+        "stops_hit": 4
+      }
+    ]
+  },
+  "variants": {
+    "base": {
+      "sharpe": 0.5724505049539458,
+      "cagr": 0.10143664333527624,
+      "max_drawdown": -0.473227783439912,
+      "ann_vol": 0.14181849156269702,
+      "final_multiple": 25.875912706322858,
+      "exposure": 0.9010263064763477,
+      "trades": 29,
+      "stops_hit": 28
+    },
+    "cost_basis": {
+      "sharpe": 0.5104662979732904,
+      "cagr": 0.108360320055924,
+      "max_drawdown": -0.5518911920565719,
+      "ann_vol": 0.18522396270639788,
+      "final_multiple": 31.95468531401142,
+      "exposure": 0.9998820337383508,
+      "trades": 1,
+      "stops_hit": 0
+    },
+    "wait20": {
+      "sharpe": 0.6129539389473505,
+      "cagr": 0.11317320445622436,
+      "max_drawdown": -0.44877306388489524,
+      "ann_vol": 0.1522854029153061,
+      "final_multiple": 36.9742358371601,
+      "exposure": 0.9267429515158665,
+      "trades": 32,
+      "stops_hit": 31
+    },
+    "never_back": {
+      "sharpe": 0.33507745960982693,
+      "cagr": 0.038750723899361184,
+      "max_drawdown": -0.10038188385287161,
+      "ann_vol": 0.03952407781426293,
+      "final_multiple": 3.597356460739588,
+      "exposure": 0.1251622036097676,
+      "trades": 1,
+      "stops_hit": 1
+    },
+    "reentry10": {
+      "sharpe": 0.4772394691171808,
+      "cagr": 0.09067478841686127,
+      "max_drawdown": -0.4723745291560687,
+      "ann_vol": 0.1529722862281074,
+      "final_multiple": 18.591158060844776,
+      "exposure": 0.9406629703904683,
+      "trades": 35,
+      "stops_hit": 34
+    },
+    "reentry50": {
+      "sharpe": 0.597908513834986,
+      "cagr": 0.09893074632693422,
+      "max_drawdown": -0.32112047464117266,
+      "ann_vol": 0.1290852948288684,
+      "final_multiple": 23.965508010083386,
+      "exposure": 0.8326058747198302,
+      "trades": 22,
+      "stops_hit": 21
+    }
+  },
+  "variants_n": 5,
+  "never_back_first_exit": "1997-04-14",
+  "cost_basis_ever_stopped": false,
+  "wait_check": {
+    "n": 7,
+    "n_beat_buyhold_cagr": 4,
+    "rows": [
+      {
+        "wait": 10,
+        "sharpe": 0.5916141540936304,
+        "cagr": 0.11468887249534121,
+        "max_drawdown": -0.47765681528464676,
+        "ann_vol": 0.16292137607313564,
+        "final_multiple": 38.70768708135551,
+        "exposure": 0.9574141795446502,
+        "trades": 37
+      },
+      {
+        "wait": 15,
+        "sharpe": 0.6297447116568751,
+        "cagr": 0.12077537833734842,
+        "max_drawdown": -0.4534996400775644,
+        "ann_vol": 0.16121405933706978,
+        "final_multiple": 46.49760927996447,
+        "exposure": 0.9414887342220125,
+        "trades": 34
+      },
+      {
+        "wait": 20,
+        "sharpe": 0.6129539389473505,
+        "cagr": 0.11317320445622436,
+        "max_drawdown": -0.44877306388489524,
+        "ann_vol": 0.1522854029153061,
+        "final_multiple": 36.9742358371601,
+        "exposure": 0.9267429515158665,
+        "trades": 32
+      },
+      {
+        "wait": 25,
+        "sharpe": 0.5984473102151621,
+        "cagr": 0.10990044920308728,
+        "max_drawdown": -0.478651398297372,
+        "ann_vol": 0.1505791483725574,
+        "final_multiple": 33.48429850537408,
+        "exposure": 0.9114073375014746,
+        "trades": 31
+      },
+      {
+        "wait": 30,
+        "sharpe": 0.5993792145384332,
+        "cagr": 0.10758977780086787,
+        "max_drawdown": -0.47306827408579366,
+        "ann_vol": 0.1456790719286711,
+        "final_multiple": 31.215070788786488,
+        "exposure": 0.8972513861035744,
+        "trades": 30
+      },
+      {
+        "wait": 40,
+        "sharpe": 0.5673876326862143,
+        "cagr": 0.09947786992548546,
+        "max_drawdown": -0.4264844820839634,
+        "ann_vol": 0.1393352097060018,
+        "final_multiple": 24.3705665820027,
+        "exposure": 0.8677598206912823,
+        "trades": 29
+      },
+      {
+        "wait": 60,
+        "sharpe": 0.46641062457260424,
+        "cagr": 0.08096616973759674,
+        "max_drawdown": -0.41064344717173584,
+        "ann_vol": 0.1305101093324085,
+        "final_multiple": 13.757802388479693,
+        "exposure": 0.8158546655656482,
+        "trades": 27
+      }
+    ],
+    "wait20_stops": 31,
+    "wait20_share_higher": 0.4838709677419355,
+    "wait20_shares_left_per_100": 112.79601291050724,
+    "other_assets": {
+      "QQQ": {
+        "cagr": 0.09534641301445812,
+        "buyhold_cagr": 0.10902341827212081,
+        "sharpe": 0.44216492869096374,
+        "buyhold_sharpe": 0.4427139430856569
+      },
+      "IWM": {
+        "cagr": 0.07942279273526975,
+        "buyhold_cagr": 0.08438171948742523,
+        "sharpe": 0.39619256832908006,
+        "buyhold_sharpe": 0.3791563764655314
+      },
+      "TLT": {
+        "cagr": 0.0338354304930093,
+        "buyhold_cagr": 0.03285674627800139,
+        "sharpe": 0.1846284185236073,
+        "buyhold_sharpe": 0.17402260212229045
+      },
+      "GLD": {
+        "cagr": 0.08893072995727502,
+        "buyhold_cagr": 0.10303943211657485,
+        "sharpe": 0.48560024794588624,
+        "buyhold_sharpe": 0.5292415684070356
+      }
+    },
+    "other_assets_beat_cagr": 1,
+    "wait20_in_sample": {
+      "sharpe": 0.3407895946439481,
+      "cagr": 0.08081650000841312,
+      "max_drawdown": -0.44877306388489524,
+      "ann_vol": 0.16153192896223773,
+      "final_multiple": 3.724607336237975,
+      "exposure": 0.9106472795497186,
+      "trades": 20
+    },
+    "wait20_out_of_sample": {
+      "sharpe": 0.9283438898299854,
+      "cagr": 0.14578701765629498,
+      "max_drawdown": -0.2434416537104902,
+      "ann_vol": 0.14231332832282276,
+      "final_multiple": 9.761463578159907,
+      "exposure": 0.9430334678376454,
+      "trades": 13
+    }
+  },
+  "cost_sweep": [
+    {
+      "cost_bps": 0,
+      "strategy_cagr": 0.1023695050036122,
+      "buyhold_cagr": 0.10837678207945922
+    },
+    {
+      "cost_bps": 2,
+      "strategy_cagr": 0.1019963215518489,
+      "buyhold_cagr": 0.10837019822864158
+    },
+    {
+      "cost_bps": 5,
+      "strategy_cagr": 0.10143664333527624,
+      "buyhold_cagr": 0.108360320055924
+    },
+    {
+      "cost_bps": 10,
+      "strategy_cagr": 0.10050410489700612,
+      "buyhold_cagr": 0.10834385003988234
+    },
+    {
+      "cost_bps": 15,
+      "strategy_cagr": 0.09957188973849873,
+      "buyhold_cagr": 0.10832737202345055
+    },
+    {
+      "cost_bps": 20,
+      "strategy_cagr": 0.09863999790948164,
+      "buyhold_cagr": 0.1083108859987334
+    },
+    {
+      "cost_bps": 30,
+      "strategy_cagr": 0.09677718443899486,
+      "buyhold_cagr": 0.10827788989280318
+    },
+    {
+      "cost_bps": 40,
+      "strategy_cagr": 0.09491566488402348,
+      "buyhold_cagr": 0.10824486165869263
+    },
+    {
+      "cost_bps": 50,
+      "strategy_cagr": 0.09305543964356944,
+      "buyhold_cagr": 0.10821180123281526
+    }
+  ],
+  "breakeven_vs_buyhold_bps": 0.0,
+  "idle_cash_zero_rate": {
+    "cagr": 0.099084494644198,
+    "final_multiple": 24.07866964424174
+  },
+  "split": {
+    "in_sample": "1993-01-29 to 2009-12-31",
+    "out_of_sample": "2010-01-01 to 2026-10-02",
+    "in_sample_rows": [
+      {
+        "stop": 0.05,
+        "sharpe": 0.2652424753803961,
+        "cagr": 0.06232713654200528,
+        "max_drawdown": -0.2826546154541889,
+        "ann_vol": 0.12069438025465275,
+        "final_multiple": 2.781556356113702,
+        "exposure": 0.7134146341463414,
+        "trades": 45
+      },
+      {
+        "stop": 0.08,
+        "sharpe": 0.26156102493154565,
+        "cagr": 0.06437564593073031,
+        "max_drawdown": -0.46262255289868315,
+        "ann_vol": 0.13867853577537317,
+        "final_multiple": 2.8737168265789204,
+        "exposure": 0.8299718574108818,
+        "trades": 24
+      },
+      {
+        "stop": 0.1,
+        "sharpe": 0.29499563737700973,
+        "cagr": 0.07077062531003708,
+        "max_drawdown": -0.473227783439912,
+        "ann_vol": 0.1475985659362758,
+        "final_multiple": 3.1802515345773315,
+        "exposure": 0.8792213883677298,
+        "trades": 18
+      },
+      {
+        "stop": 0.15,
+        "sharpe": 0.29713944663604563,
+        "cagr": 0.07302856215391773,
+        "max_drawdown": -0.5011414058663274,
+        "ann_vol": 0.1601527746679058,
+        "final_multiple": 3.2956446791118084,
+        "exposure": 0.9338649155722326,
+        "trades": 10
+      },
+      {
+        "stop": 0.2,
+        "sharpe": 0.2694142267434088,
+        "cagr": 0.06964915522428439,
+        "max_drawdown": -0.5153615067957209,
+        "ann_vol": 0.17267927315400602,
+        "final_multiple": 3.12436153721609,
+        "exposure": 0.9659943714821764,
+        "trades": 7
+      },
+      {
+        "stop": 0.25,
+        "sharpe": 0.2518127874986175,
+        "cagr": 0.06649906238265513,
+        "max_drawdown": -0.587739555095601,
+        "ann_vol": 0.17378863806797817,
+        "final_multiple": 2.9722750146873658,
+        "exposure": 0.9730300187617261,
+        "trades": 6
+      },
+      {
+        "stop": 0.3,
+        "sharpe": 0.27986874073639684,
+        "cagr": 0.07210131604116254,
+        "max_drawdown": -0.5790874479916364,
+        "ann_vol": 0.17725977579096,
+        "final_multiple": 3.2477885422146615,
+        "exposure": 0.9800656660412758,
+        "trades": 4
+      }
+    ],
+    "best_in_sample": {
+      "stop": 0.15,
+      "in_sample": {
+        "sharpe": 0.29713944663604563,
+        "cagr": 0.07302856215391773,
+        "max_drawdown": -0.5011414058663274,
+        "ann_vol": 0.1601527746679058,
+        "final_multiple": 3.2956446791118084,
+        "exposure": 0.9338649155722326,
+        "trades": 10
+      },
+      "out_of_sample": {
+        "sharpe": 0.7455346001464341,
+        "cagr": 0.11904857457897533,
+        "max_drawdown": -0.22156771218902782,
+        "ann_vol": 0.1462609186447994,
+        "final_multiple": 6.57395691214614,
+        "exposure": 0.9556135770234987,
+        "trades": 8
+      }
+    },
+    "stop10": {
+      "stop": 0.1,
+      "in_sample": {
+        "sharpe": 0.29499563737700973,
+        "cagr": 0.07077062531003708,
+        "max_drawdown": -0.473227783439912,
+        "ann_vol": 0.1475985659362758,
+        "final_multiple": 3.1802515345773315,
+        "exposure": 0.8792213883677298,
+        "trades": 18
+      },
+      "out_of_sample": {
+        "sharpe": 0.8790341416373589,
+        "cagr": 0.13225470954615237,
+        "max_drawdown": -0.20611978613902282,
+        "ann_vol": 0.13571305795225788,
+        "final_multiple": 8.000745059867615,
+        "exposure": 0.9230951815808213,
+        "trades": 12
+      }
+    },
+    "buyhold": {
+      "in_sample": {
+        "sharpe": 0.2872264680152136,
+        "cagr": 0.07583331360659074,
+        "max_drawdown": -0.5518911920565719,
+        "ann_vol": 0.19871607269440586,
+        "final_multiple": 3.444471485696824,
+        "exposure": 0.999765478424015,
+        "trades": 1
+      },
+      "out_of_sample": {
+        "sharpe": 0.7770699956679996,
+        "cagr": 0.14116232784104632,
+        "max_drawdown": -0.3371738233754191,
+        "ann_vol": 0.17049086484098394,
+        "final_multiple": 9.122380367516751,
+        "exposure": 1.0,
+        "trades": 1
+      }
+    }
+  },
+  "other_assets": {
+    "QQQ": {
+      "start": "1999-03-10",
+      "strategy": {
+        "sharpe": 0.43159489352214275,
+        "cagr": 0.08619849350461473,
+        "max_drawdown": -0.5064581731747981,
+        "ann_vol": 0.1825047472600655,
+        "final_multiple": 9.768447841028646,
+        "exposure": 0.7976928622927181,
+        "trades": 51
+      },
+      "buyhold": {
+        "sharpe": 0.4427139430856569,
+        "cagr": 0.10902341827212081,
+        "max_drawdown": -0.8298197276624963,
+        "ann_vol": 0.2684976549464754,
+        "final_multiple": 17.329121900616325,
+        "exposure": 0.9998558038932949,
+        "trades": 1
+      },
+      "stops_hit": 50,
+      "share_higher": 0.7
+    },
+    "IWM": {
+      "start": "2000-05-26",
+      "strategy": {
+        "sharpe": 0.33867718760638754,
+        "cagr": 0.06571955108482364,
+        "max_drawdown": -0.4007767459536594,
+        "ann_vol": 0.1780818381422505,
+        "final_multiple": 5.351079811174746,
+        "exposure": 0.8202806699864192,
+        "trades": 42
+      },
+      "buyhold": {
+        "sharpe": 0.3791563764655314,
+        "cagr": 0.08438171948742523,
+        "max_drawdown": -0.5863967811351096,
+        "ann_vol": 0.23803924641038263,
+        "final_multiple": 8.455016480558237,
+        "exposure": 0.9998491021578392,
+        "trades": 1
+      },
+      "stops_hit": 41,
+      "share_higher": 0.6829268292682927
+    },
+    "TLT": {
+      "start": "2002-07-26",
+      "strategy": {
+        "sharpe": 0.21388935512179652,
+        "cagr": 0.03717572054985352,
+        "max_drawdown": -0.2611455573721809,
+        "ann_vol": 0.12394931971584264,
+        "final_multiple": 2.4177282948594083,
+        "exposure": 0.8606638186000657,
+        "trades": 23
+      },
+      "buyhold": {
+        "sharpe": 0.17402260212229045,
+        "cagr": 0.03285674627800139,
+        "max_drawdown": -0.4835121886613992,
+        "ann_vol": 0.14254052443111037,
+        "final_multiple": 2.185627117488964,
+        "exposure": 0.9998356884653302,
+        "trades": 1
+      },
+      "stops_hit": 22,
+      "share_higher": 0.5454545454545454
+    },
+    "GLD": {
+      "start": "2004-11-18",
+      "strategy": {
+        "sharpe": 0.33726145542298186,
+        "cagr": 0.06114127351621357,
+        "max_drawdown": -0.5994240826536554,
+        "ann_vol": 0.16028077039460187,
+        "final_multiple": 3.6614979937827625,
+        "exposure": 0.8604143947655398,
+        "trades": 32
+      },
+      "buyhold": {
+        "sharpe": 0.5292415684070356,
+        "cagr": 0.10303943211657485,
+        "max_drawdown": -0.4555501273425706,
+        "ann_vol": 0.18266534516596186,
+        "final_multiple": 8.54011980909881,
+        "exposure": 0.999818247909851,
+        "trades": 1
+      },
+      "stops_hit": 31,
+      "share_higher": 0.7096774193548387
+    }
+  },
+  "vs_ep03": {
+    "window_start": "1993-11-11",
+    "ep03": {
+      "cagr": 0.08831188417064251,
+      "sharpe": 0.5486163633313381,
+      "max_drawdown": -0.24428049382753436,
+      "final_multiple": 16.173763825707674,
+      "exposure": 0.7736168156559555,
+      "trades": 104
+    },
+    "ep03_annual": {
+      "years": 33,
+      "years_strategy_won": 6,
+      "down_years_buyhold": 6,
+      "strategy_won_in_down_years": 6
+    },
+    "ep03_buyhold": {
+      "cagr": 0.10860682217074791,
+      "sharpe": 0.5095887580598015,
+      "max_drawdown": -0.5518911920565714,
+      "final_multiple": 29.69782387878378
+    },
+    "stop10_same_window": {
+      "sharpe": 0.5712155407345425,
+      "cagr": 0.10162416589157486,
+      "max_drawdown": -0.47322778343991034,
+      "ann_vol": 0.1427510297265467,
+      "final_multiple": 24.125258112541097,
+      "exposure": 0.8987678183136023,
+      "trades": 29
+    },
+    "buyhold_same_window": {
+      "sharpe": 0.5096452648226456,
+      "cagr": 0.10871441459861875,
+      "max_drawdown": -0.5518911920565721,
+      "ann_vol": 0.18685432518234088,
+      "final_multiple": 29.79276672691718,
+      "exposure": 1.0,
+      "trades": 1
+    }
+  }
+}
