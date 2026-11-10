@@ -16,3 +16,10 @@ results/ep[0-9][0-9]/*
 !results/ep[0-9][0-9]/cost_sweep.csv
 !results/ep[0-9][0-9]/param_grid.csv
 !results/ep[0-9][0-9]/trades.csv
+!results/x01/
+results/x01/*
+!results/x01/results.json
+!results/x01/annual.csv
+!results/x01/cost_sweep.csv
+!results/x01/param_grid.csv
+!results/x01/trades.csv
